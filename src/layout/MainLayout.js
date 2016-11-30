@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Menu, Input } from 'semantic-ui-react'
+import { Container, Menu } from 'semantic-ui-react'
 import { Link } from 'react-router';
 
 class MainLayout extends Component {
@@ -8,14 +8,9 @@ class MainLayout extends Component {
       <div>
         <Menu inverted fixed="top">
           <Container>
-            <Menu.Item name='home' to="/" as={Link} />
-            <Menu.Item name='bar' to="/bar" as={Link} />
-
-            <Menu.Menu position='right'>
-              <Menu.Item>
-                <Input icon='search' placeholder='Search...' />
-              </Menu.Item>
-            </Menu.Menu>
+            <Menu.Item header>Teamadoro</Menu.Item>
+            <Menu.Item name='timer' to="/" as={Link} />
+            <Menu.Item name='teams' to="/teams" as={Link} />
           </Container>
         </Menu>
         {this.props.children}

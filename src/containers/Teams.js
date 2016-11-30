@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Segment } from 'semantic-ui-react'
-import { click } from '../store/reducers/counter.js';
 
 const mapStateToProps = (state) => ({
-  clicks: state.counter.clicks
+
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick: () => dispatch(click())
+
 });
 
 export class Home extends Component {
@@ -18,9 +17,8 @@ export class Home extends Component {
         <Segment>
           <Container text>
             <Header as='h1'
-              content={`Clicks ${this.props.clicks}`}
-              subheader='Aenean massa strong.'
-              onClick={this.props.onClick} />
+              content="Teams"
+              subheader='Aenean massa strong.' />
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
