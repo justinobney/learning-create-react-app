@@ -19,6 +19,20 @@ const store = createStore(
   )
 );
 
+// window.$.connection.hub.url = 'http://localhost:47316/signalr';
+//
+// var messages = window.$.connection.messageHub;
+// messages.client.broadcastMessage = function (data) {
+//   console.log(data);
+//   store.dispatch({
+//     type: 'CLICK'
+//   });
+// };
+//
+// window.$.connection.hub.start().done(function () {
+//   console.log('connected');
+// });
+
 if (module.hot) {
   module.hot.accept('./reducers', () => {
     const nextRootReducer = require('./reducers').default;
